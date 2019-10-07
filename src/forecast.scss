@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* navbar style */
+.navbar {
+  width: 100%;
+  background: rgb(47, 150, 163);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  h2 {
+    color: whitesmoke;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .fas {
+    color: whitesmoke;
+    font-size: 30px;
+    margin: 5px;
+  }
+}
+
+/* weather container for whole page */
+.weather-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  .map-content {
+    width: 40%;
+  }
+  .current-temperatures {
+    width: 30%;
+  }
+  .long-temperatures {
+    width: 30%;
+  }
+  @media screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+    .map-content {
+      width: 50%;
+      margin-right: 2%;
+    }
+    .current-temperatures {
+      width: 40%;
+      margin-right: 2%;
+    }
+    .long-temperature {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .map-content,
+    .current-temperatures,
+    .long-temperature {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+}

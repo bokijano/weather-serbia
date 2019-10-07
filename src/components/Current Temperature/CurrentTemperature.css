@@ -1,0 +1,114 @@
+.map-content {
+  display: block;
+  margin-top: 15px;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
+  background: linear-gradient(#2f96a3, #303e8f);
+}
+
+.map-content li {
+  list-style-type: none;
+}
+
+.map-content .img-pos {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.map-content #pirot {
+  bottom: 22%;
+  right: 10%;
+}
+
+.map-content #nis {
+  bottom: 27%;
+  right: 25%;
+}
+
+.map-content #kragujevac {
+  bottom: 40%;
+  right: 37%;
+}
+
+.map-content #uzice {
+  bottom: 38%;
+  left: 20%;
+}
+
+.map-content #zajecar {
+  bottom: 37%;
+  right: 20%;
+}
+
+.map-content #pozarevac {
+  top: 35%;
+  right: 35%;
+}
+
+.map-content #beograd {
+  top: 30%;
+  left: 29%;
+}
+
+.map-content #novi-sad {
+  top: 20%;
+  left: 25%;
+}
+
+.map-content #subotica {
+  top: 5%;
+  left: 20%;
+}
+
+.map-content .city-pos {
+  position: absolute;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px whitesmoke;
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.map-content .city-pos .temperature-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.map-content .city-pos .temperature-content img {
+  margin: 2px;
+  padding: -5px;
+  height: 30px;
+  width: 30px;
+  background: grey;
+}
+
+.map-content .city-pos .temperature-content h2,
+.map-content .city-pos .temperature-content span {
+  margin: 2px;
+}
+
+.map-content .city-pos:hover {
+  text-shadow: 2px 2px 4px;
+}
+/*# sourceMappingURL=CurrentTemperature.css.map */

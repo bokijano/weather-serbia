@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* navbar style */
+.navbar {
+  width: 100%;
+  background: #2f96a3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar h2 {
+  color: whitesmoke;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.navbar .fas {
+  color: whitesmoke;
+  font-size: 30px;
+  margin: 5px;
+}
+
+/* weather container for whole page */
+.weather-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.weather-container .map-content {
+  width: 40%;
+}
+
+.weather-container .current-temperatures {
+  width: 30%;
+}
+
+.weather-container .long-temperatures {
+  width: 30%;
+}
+
+@media screen and (max-width: 1200px) {
+  .weather-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .weather-container .map-content {
+    width: 50%;
+    margin-right: 2%;
+  }
+  .weather-container .current-temperatures {
+    width: 40%;
+    margin-right: 2%;
+  }
+  .weather-container .long-temperature {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .weather-container .map-content,
+  .weather-container .current-temperatures,
+  .weather-container .long-temperature {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+/*# sourceMappingURL=forecast.css.map */

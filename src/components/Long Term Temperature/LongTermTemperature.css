@@ -1,0 +1,27 @@
+.long-temperature {
+  display: block;
+  width: 30%;
+  margin-top: 10px;
+}
+
+.long-temperature .long-temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.long-temperature .long-temp .dayFirst,
+.long-temperature .long-temp .daySecond,
+.long-temperature .long-temp .dayThird {
+  width: 30%;
+  text-align: center;
+  color: red;
+}
+/*# sourceMappingURL=LongTermTemperature.css.map */

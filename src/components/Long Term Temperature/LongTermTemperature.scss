@@ -1,0 +1,17 @@
+.long-temperature {
+  display: block;
+  width: 30%;
+  margin-top: 10px;
+  .long-temp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .dayFirst,
+    .daySecond,
+    .dayThird {
+      width: 30%;
+      text-align: center;
+      color: red;
+    }
+  }
+}

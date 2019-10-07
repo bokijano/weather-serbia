@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EAChB,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,GAAG;EACV,UAAU,EAAE,IAAI;CAajB;;AAhBD,AAIE,iBAJe,CAIf,UAAU,CAAC;EACT,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,aAAa;CAQ/B;;AAfH,AAQI,iBARa,CAIf,UAAU,CAIR,SAAS;AARb,iBAAiB,CAIf,UAAU,CAKR,UAAU;AATd,iBAAiB,CAIf,UAAU,CAMR,SAAS,CAAC;EACR,KAAK,EAAE,GAAG;EACV,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,GAAG;CACX",
+    "sources": [
+        "LongTermTemperature.scss"
+    ],
+    "names": [],
+    "file": "LongTermTemperature.css"
+}
