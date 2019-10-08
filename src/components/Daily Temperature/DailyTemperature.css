@@ -1,5 +1,4 @@
 .current-temperatures {
-  width: 30%;
   margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,20 +15,5 @@
 .current-temperatures .currDate {
   text-align: center;
   color: red;
-}
-
-@media screen and (max-width: 1200px) {
-  .current-temperatures {
-    width: 42%;
-    margin-right: 2%;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .current-temperatures {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
 }
 /*# sourceMappingURL=DailyTemperature.css.map */

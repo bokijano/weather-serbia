@@ -1,8 +1,55 @@
 import React, { Component } from "react";
 import SerbiaMap from "./serbia.png";
 import "./CurrentTemperature.css";
+import rain from "./../temperature icons/rain.svg";
+import partlycloudynight from "./../temperature icons/partly-cloudy-night.svg";
+import clearday from "./../temperature icons/clear-day.svg";
+import clearnight from "./../temperature icons/clear-night.svg";
+import cloudy from "./../temperature icons/cloudy.svg";
+import fog from "./../temperature icons/fog.svg";
+import partlycloudyday from "./../temperature icons/partly-cloudy-day.svg";
+import sleet from "./../temperature icons/sleet.svg";
+import snow from "./../temperature icons/snow.svg";
+import wind from "./../temperature icons/wind.svg";
 
 export default class CurrentTemperature extends Component {
+  async getTemperatures(lat, long, temp, icons) {
+    try {
+      const api = `${this.props.proxy}https://api.darksky.net/forecast/${this.props.API_KEY}/${lat},${long}`;
+      const data = await fetch(api);
+      const jsonData = await data.json();
+      console.log(jsonData);
+
+      const { temperature, icon } = jsonData.currently;
+      console.log(temperature, icon);
+
+      let temperatureC = (((temperature - 32) * 5) / 9).toFixed(0);
+      console.log(temperatureC);
+
+      document.getElementById(temp).textContent = temperatureC;
+
+      const currentIcon = icon.replace(/-/g, "");
+      console.log(currentIcon);
+
+      let result = `<img src="temperature icons/${icon}.svg" alt="no picture" />`;
+      console.log(result);
+      document.getElementById(icons).innerHTML = result;
+      console.log(document.getElementById(icons));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  componentDidMount() {
+    this.getTemperatures(43.15306, 22.58611, "temPirot", "iconPirot");
+    this.getTemperatures(43.32472, 21.90333, "temNis", "iconNis");
+    this.getTemperatures(43.85861, 19.84878, "temUzice", "iconUzice");
+    this.getTemperatures(44.01667, 20.91667, "temKragujevac", "iconKragujevac");
+    this.getTemperatures(43.90358, 22.26405, "temZajecar", "iconZajecar");
+    this.getTemperatures(44.62133, 21.18782, "temPozarevac", "iconPozarevac");
+    this.getTemperatures(44.80401, 20.46513, "temBeograd", "iconBeograd");
+    this.getTemperatures(45.25167, 19.83694, "temNoviSad", "iconNoviSad");
+    this.getTemperatures(46.1, 19.66667, "temSubotica", "iconSubotica");
+  }
   render() {
     return (
       // map with 9 cities and it's temperature
@@ -13,11 +60,12 @@ export default class CurrentTemperature extends Component {
           <li
             id="pirot"
             className="city-pos"
-            onClick="getPosition(43.15306, 22.58611, 0)"
+            onClick={() => this.getTemperatures(43.15306, 22.58611)}
           >
             <h4>Pirot</h4>
             <div className="temperature-content">
-              <img id="iconPirot" src="" alt="" />
+              {/*<img id="iconPirot" src={rain} alt="" />*/}
+              <span id="iconPirot"></span>
               <h3 id="temPirot" className="temperature-degree">
                 35
               </h3>
@@ -28,11 +76,12 @@ export default class CurrentTemperature extends Component {
           <li
             id="nis"
             className="city-pos"
-            onClick="getPosition(43.32472, 21.90333, 1)"
+            onClick={() => this.getPosition(43.32472, 21.90333)}
           >
             <h4>Niš</h4>
             <div className="temperature-content">
-              <img id="iconNis" src="" alt="" />
+              {/*<img id="iconNis" src="" alt="" />*/}
+              <span id="iconNis"></span>
               <h3 id="temNis" className="temperature-degree">
                 30
               </h3>
@@ -43,11 +92,12 @@ export default class CurrentTemperature extends Component {
           <li
             id="uzice"
             className="city-pos"
-            onClick="getPosition(43.85861, 19.84878, 2)"
+            onClick={() => this.getPosition(43.85861, 19.84878)}
           >
             <h4>Užice</h4>
             <div className="temperature-content">
-              <img id="iconUzice" src="" alt="" />
+              {/*<img id="iconUzice" src="" alt="" />*/}
+              <span id="iconUzice"></span>
               <h3 id="temUzice" className="temperature-degree">
                 30
               </h3>
@@ -58,11 +108,12 @@ export default class CurrentTemperature extends Component {
           <li
             id="kragujevac"
             className="city-pos"
-            onClick="getPosition(44.01667, 20.91667, 3)"
+            onClick={() => this.getPosition(44.01667, 20.91667)}
           >
             <h4>Kragujevac</h4>
             <div className="temperature-content">
-              <img id="iconKragujevac" src="" alt="" />
+              {/*<img id="iconKragujevac" src="" alt="" />*/}
+              <span id="iconKrsgujevac"></span>
               <h3 id="temKragujevac" className="temperature-degree">
                 30
               </h3>
@@ -73,11 +124,12 @@ export default class CurrentTemperature extends Component {
           <li
             id="zajecar"
             className="city-pos"
-            onClick="getPosition(43.90358, 22.26405, 4)"
+            onClick={() => this.getPosition(43.90358, 22.26405)}
           >
             <h4>Zaječar</h4>
             <div className="temperature-content">
-              <img id="iconZajecar" src="" alt="" />
+              {/*<img id="iconZajecar" src="" alt="" />*/}
+              <span id="iconZajecar"></span>
               <h3 id="temZajecar" className="temperature-degree">
                 30
               </h3>
@@ -88,11 +140,12 @@ export default class CurrentTemperature extends Component {
           <li
             id="pozarevac"
             className="city-pos"
-            onClick="getPosition(44.62133, 21.18782, 5)"
+            onClick={() => getPosition(44.62133, 21.18782)}
           >
             <h4>Požarevac</h4>
             <div className="temperature-content">
-              <img id="iconPozarevac" src="" alt="" />
+              {/*<img id="iconPozarevac" src="" alt="" />*/}
+              <span id="iconPoyarevac"></span>
               <h3 id="temPozarevac" className="temperature-degree">
                 30
               </h3>
@@ -103,11 +156,12 @@ export default class CurrentTemperature extends Component {
           <li
             id="beograd"
             className="city-pos"
-            onClick="getPosition(44.80401, 20.46513, 6)"
+            onClick={() => this.getPosition(44.80401, 20.46513)}
           >
             <h4 id="bg">Beograd</h4>
             <div className="temperature-content">
-              <img id="iconBeograd" src="" alt="" />
+              {/*<img id="iconBeograd" src="" alt="" />*/}
+              <span id="iconBeograd"></span>
               <h3 id="temBeograd" className="temperature-degree">
                 30
               </h3>
@@ -118,11 +172,12 @@ export default class CurrentTemperature extends Component {
           <li
             id="novi-sad"
             className="city-pos"
-            onClick="getPosition(45.25167, 19.83694, 7)"
+            onClick={() => this.getPosition(45.25167, 19.83694)}
           >
             <h4>Novi Sad</h4>
             <div className="temperature-content">
-              <img id="iconNoviSad" src="" alt="" />
+              {/*<img id="iconNoviSad" src="" alt="" />*/}
+              <span id="iconNoviSad"></span>
               <h3 id="temNoviSad" className="temperature-degree">
                 30
               </h3>
@@ -133,11 +188,12 @@ export default class CurrentTemperature extends Component {
           <li
             id="subotica"
             className="city-pos"
-            onClick="getPosition(46.1, 19.66667, 8)"
+            onClick={() => this.getPosition(46.1, 19.66667)}
           >
             <h4>Subotica</h4>
             <div className="temperature-content">
-              <img id="iconSubotica" src="" alt="" />
+              {/*<img id="iconSubotica" src="" alt="" />*/}
+              <span id="iconSubotica"></span>
               <h3 id="temSubotica" className="temperature-degree">
                 30
               </h3>
