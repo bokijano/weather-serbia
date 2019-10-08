@@ -1,16 +1,6 @@
 import React, { Component } from "react";
 import SerbiaMap from "./serbia.png";
 import "./CurrentTemperature.css";
-import rain from "./../temperature icons/rain.svg";
-import partlycloudynight from "./../temperature icons/partly-cloudy-night.svg";
-import clearday from "./../temperature icons/clear-day.svg";
-import clearnight from "./../temperature icons/clear-night.svg";
-import cloudy from "./../temperature icons/cloudy.svg";
-import fog from "./../temperature icons/fog.svg";
-import partlycloudyday from "./../temperature icons/partly-cloudy-day.svg";
-import sleet from "./../temperature icons/sleet.svg";
-import snow from "./../temperature icons/snow.svg";
-import wind from "./../temperature icons/wind.svg";
 
 export default class CurrentTemperature extends Component {
   async getTemperatures(lat, long, temp, icons) {
@@ -21,20 +11,15 @@ export default class CurrentTemperature extends Component {
       console.log(jsonData);
 
       const { temperature, icon } = jsonData.currently;
-      console.log(temperature, icon);
 
       let temperatureC = (((temperature - 32) * 5) / 9).toFixed(0);
-      console.log(temperatureC);
 
       document.getElementById(temp).textContent = temperatureC;
 
-      const currentIcon = icon.replace(/-/g, "");
-      console.log(currentIcon);
-
-      let result = `<img src="temperature icons/${icon}.svg" alt="no picture" />`;
-      console.log(result);
+      let result = `<img src="./../temperature icons/${icon}.svg" alt="no picture" />`;
+      
       document.getElementById(icons).innerHTML = result;
-      console.log(document.getElementById(icons));
+      
     } catch (error) {
       console.log(error);
     }
@@ -113,7 +98,7 @@ export default class CurrentTemperature extends Component {
             <h4>Kragujevac</h4>
             <div className="temperature-content">
               {/*<img id="iconKragujevac" src="" alt="" />*/}
-              <span id="iconKrsgujevac"></span>
+              <span id="iconKragujevac"></span>
               <h3 id="temKragujevac" className="temperature-degree">
                 30
               </h3>
