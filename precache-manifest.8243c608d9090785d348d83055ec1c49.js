@@ -1,23 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "e4a95c3cc38def7c0f64",
-    "url": "/github.io/weather-serbia/static/css/main.9ba3599b.chunk.css"
+    "revision": "8c335bc289e79fb138c5",
+    "url": "/github.io/weather-serbia/static/css/main.9aec17af.chunk.css"
   },
   {
-    "revision": "e4a95c3cc38def7c0f64",
-    "url": "/github.io/weather-serbia/static/js/main.e4a95c3c.chunk.js"
+    "revision": "8c335bc289e79fb138c5",
+    "url": "/github.io/weather-serbia/static/js/main.8c335bc2.chunk.js"
   },
   {
     "revision": "fc14c366082b8486094a",
     "url": "/github.io/weather-serbia/static/js/runtime~main.fc14c366.js"
   },
   {
-    "revision": "f3b3c1a8c79fe4239652",
-    "url": "/github.io/weather-serbia/static/js/2.f3b3c1a8.chunk.js"
-  },
-  {
-    "revision": "83043161160323991204bae6ed073c71",
-    "url": "/github.io/weather-serbia/static/media/partly-cloudy-day.83043161.svg"
+    "revision": "5ce31519cb6a1d637057",
+    "url": "/github.io/weather-serbia/static/js/2.5ce31519.chunk.js"
   },
   {
     "revision": "492aef1167956247c2151bfb19b5a85f",
@@ -32,12 +28,20 @@ self.__precacheManifest = [
     "url": "/github.io/weather-serbia/static/media/clear-day.4b42731b.svg"
   },
   {
+    "revision": "83043161160323991204bae6ed073c71",
+    "url": "/github.io/weather-serbia/static/media/partly-cloudy-day.83043161.svg"
+  },
+  {
     "revision": "8c244a470a9332a9f7b78845e5d53762",
     "url": "/github.io/weather-serbia/static/media/clear-night.8c244a47.svg"
   },
   {
     "revision": "3388310388a81d4f3f48c11e1de5340e",
     "url": "/github.io/weather-serbia/static/media/cloudy.33883103.svg"
+  },
+  {
+    "revision": "73cce30d2098b0aa1e312573b72bba27",
+    "url": "/github.io/weather-serbia/static/media/partly-cloudy-night.73cce30d.svg"
   },
   {
     "revision": "01bcb6c9da95a49e417d53dea1d11fae",
@@ -52,7 +56,7 @@ self.__precacheManifest = [
     "url": "/github.io/weather-serbia/static/media/sleet.a0d9e9ae.svg"
   },
   {
-    "revision": "999213beada794de7b4c9a1ca04cd6f2",
+    "revision": "387f4b975ab81061c2cb2f3ba84edcbb",
     "url": "/github.io/weather-serbia/index.html"
   }
 ];
