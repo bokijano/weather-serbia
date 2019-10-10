@@ -15,5 +15,107 @@
 .current-temperatures .currDate {
   text-align: center;
   color: red;
+  font-weight: bolder;
+}
+
+.current-temperatures .curr-city {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2px;
+}
+
+.current-temperatures .curr-city .city-name {
+  width: 45%;
+  margin-left: 10px;
+  margin-top: 2px;
+  font-weight: bolder;
+}
+
+.current-temperatures .curr-city .city-name .fa {
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.current-temperatures .curr-city .city-name .fa.fa:hover {
+  font-size: 120%;
+  font-weight: bolder;
+}
+
+.current-temperatures .curr-city #temp-icon {
+  margin: 2px;
+  height: 45px;
+  width: 45px;
+  margin-top: 2px;
+  background: grey;
+}
+
+.current-temperatures .curr-city .minTemp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 10%;
+}
+
+.current-temperatures .curr-city .minTemp #min {
+  color: green;
+  font-size: 16px;
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
+.current-temperatures .curr-city .minTemp #text {
+  font-size: 10px;
+  font-weight: bolder;
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
+.current-temperatures .curr-city .maxTemp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 15%;
+}
+
+.current-temperatures .curr-city .maxTemp #max {
+  color: red;
+  font-size: 25px;
+  padding-left: 5px;
+}
+
+.current-temperatures .curr-city .maxTemp #text {
+  font-size: 10px;
+  font-weight: bolder;
+  padding-left: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .current-temperatures .curr-city .maxTemp {
+    width: 20%;
+  }
+  .current-temperatures .curr-city .minTemp {
+    width: 15%;
+  }
+  .current-temperatures .curr-city .minTemp #min {
+    padding-top: 7px;
+  }
 }
 /*# sourceMappingURL=DailyTemperature.css.map */

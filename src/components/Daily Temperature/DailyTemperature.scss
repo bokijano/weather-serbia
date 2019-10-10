@@ -6,5 +6,78 @@
   .currDate {
     text-align: center;
     color: red;
+    font-weight: bolder;
+  }
+  .curr-city {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2px;
+    .city-name {
+      width: 45%;
+      margin-left: 10px;
+      margin-top: 2px;
+      font-weight: bolder;
+      .fa {
+        cursor: pointer;
+        padding-left: 10px;
+        &.fa:hover {
+          font-size: 120%;
+          font-weight: bolder;
+        }
+      }
+    }
+    #temp-icon {
+      margin: 2px;
+      height: 45px;
+      width: 45px;
+      margin-top: 2px;
+      background: grey;
+    }
+    .minTemp {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 10%;
+      #min {
+        color: green;
+        font-size: 16px;
+        padding-top: 5px;
+        padding-right: 10px;
+      }
+      #text {
+        font-size: 10px;
+        font-weight: bolder;
+        padding-top: 5px;
+        padding-right: 10px;
+      }
+    }
+    .maxTemp {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 15%;
+      #max {
+        color: red;
+        font-size: 25px;
+        padding-left: 5px;
+      }
+      #text {
+        font-size: 10px;
+        font-weight: bolder;
+        padding-left: 5px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      .maxTemp {
+        width: 20%;
+      }
+      .minTemp {
+        width: 15%;
+        #min {
+          padding-top: 7px;
+        }
+      }
+    }
   }
 }

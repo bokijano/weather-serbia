@@ -4,12 +4,21 @@ import Navbar from "./components/Navbar.js";
 import CurrentTemperature from "./components/Current Temperature/CurrentTemperature.js";
 import DailyTemperature from "./components/Daily Temperature/DailyTemperature.js";
 import LongTermTemperature from "./components/Long Term Temperature/LongTermTemperature.js";
+import clearday from "./temperature icons/clear-day.svg";
+import partlycloudyday from "./temperature icons/partly-cloudy-day.svg";
+import clearnight from "./temperature icons/clear-night.svg";
+import cloudy from "./temperature icons/cloudy.svg";
+import partlycloudynight from "./temperature icons/partly-cloudy-day.svg";
+import fog from "./temperature icons/fog.svg";
+import rain from "./temperature icons/rain.svg";
+import sleet from "./temperature icons/sleet.svg";
+import snow from "./temperature icons/snow.svg";
+import wind from "./temperature icons/snow.svg";
 
 class App extends Component {
   state = {
     cities: [
       "Pirot",
-      ,
       "Niš",
       "Užice",
       "Kragujevac",
@@ -19,10 +28,55 @@ class App extends Component {
       "Novi Sad",
       "Subotica"
     ],
-    pirot: {},
-    temperatures: [],
+    forecastItem: [
+      clearday,
+      partlycloudyday,
+      clearnight,
+      partlycloudynight,
+      cloudy,
+      fog,
+      sleet,
+      snow,
+      wind,
+      rain
+    ],
     proxy: "http://cors-anywhere.herokuapp.com/",
     API_KEY: "fb4c116f915c61742654d62a921fffa2"
+  };
+
+  convertUnix = unixTime => {
+    let months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "Oktober",
+      "November",
+      "December"
+    ];
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ];
+
+    let date = new Date(unixTime * 1000);
+    let year = date.getFullYear();
+    let month = months[date.getMonth()];
+    let day = date.getDate();
+    let dayOfWeek = days[date.getDay()];
+
+    let currentDate = dayOfWeek + " " + day + ". " + month + " " + year + ".";
+    return currentDate;
   };
 
   async getTemperatures(lat, long) {
@@ -32,7 +86,9 @@ class App extends Component {
       const jsonData = await data.json();
       console.log(jsonData);
 
-      const { temperature, icon } = jsonData.currently;
+      const { temperature, icon, time } = jsonData.currently;
+
+      console.log(this.convertUnix(time));
 
       console.log(temperature, icon);
     } catch (error) {
@@ -41,20 +97,21 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setPosition();
+    this.getTemperatures(43.15306, 22.58611);
   }
-
-  setPosition = () => {
-    let pirot = this.getTemperatures(43.15306, 22.58611);
-    console.log(pirot);
-  };
 
   render() {
     return (
       <React.Fragment>
         <Navbar />
         <div className="weather-container">
-          <DailyTemperature />
+          <DailyTemperature
+            proxy={this.state.proxy}
+            API_KEY={this.state.API_KEY}
+            cities={this.state.cities}
+            forecastItem={this.state.forecastItem}
+            convertUnix={this.convertUnix}
+          />
           <CurrentTemperature
             proxy={this.state.proxy}
             API_KEY={this.state.API_KEY}
