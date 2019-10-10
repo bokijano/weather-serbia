@@ -8,7 +8,7 @@ import clearday from "./temperature icons/clear-day.svg";
 import partlycloudyday from "./temperature icons/partly-cloudy-day.svg";
 import clearnight from "./temperature icons/clear-night.svg";
 import cloudy from "./temperature icons/cloudy.svg";
-import partlycloudynight from "./temperature icons/partly-cloudy-day.svg";
+import partlycloudynight from "./temperature icons/partly-cloudy-night.svg";
 import fog from "./temperature icons/fog.svg";
 import rain from "./temperature icons/rain.svg";
 import sleet from "./temperature icons/sleet.svg";
@@ -79,6 +79,41 @@ class App extends Component {
     return currentDate;
   };
 
+  getIcon = (icon, iconImg) => {
+    switch (icon) {
+      case "clear-day":
+        iconImg.src = this.state.forecastItem[0];
+        break;
+      case "clear-night":
+        iconImg.src = this.state.forecastItem[2];
+        break;
+      case "partly-cloudy-day":
+        iconImg.src = this.state.forecastItem[1];
+        break;
+      case "partly-cloudy-night":
+        iconImg.src = this.state.forecastItem[3];
+        break;
+      case "cloudy":
+        iconImg.src = this.state.forecastItem[4];
+        break;
+      case "rain":
+        iconImg.src = this.state.forecastItem[9];
+        break;
+      case "sleet":
+        iconImg.src = this.state.forecastItem[6];
+        break;
+      case "snow":
+        iconImg.src = this.state.forecastItem[7];
+        break;
+      case "wind":
+        iconImg.src = this.state.forecastItem[8];
+        break;
+      case "fog":
+        iconImg.src = this.state.forecastItem[5];
+        break;
+    }
+  };
+
   async getTemperatures(lat, long) {
     try {
       const api = `${this.state.proxy}https://api.darksky.net/forecast/${this.state.API_KEY}/${lat},${long}`;
@@ -109,12 +144,15 @@ class App extends Component {
             proxy={this.state.proxy}
             API_KEY={this.state.API_KEY}
             cities={this.state.cities}
+            getIcon={this.getIcon}
             forecastItem={this.state.forecastItem}
             convertUnix={this.convertUnix}
           />
           <CurrentTemperature
             proxy={this.state.proxy}
             API_KEY={this.state.API_KEY}
+            cities={this.state.cities}
+            getIcon={this.getIcon}
           />
           <LongTermTemperature />
         </div>

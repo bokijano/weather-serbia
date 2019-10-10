@@ -3,6 +3,7 @@
   margin-top: 15px;
   position: relative;
   background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+
   li {
     list-style-type: none;
   }
@@ -73,6 +74,7 @@
         margin: 2px;
       }
     }
+
     &:hover {
       text-shadow: 2px 2px 4px;
     }
