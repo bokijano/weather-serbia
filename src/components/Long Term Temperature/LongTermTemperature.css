@@ -24,4 +24,185 @@
   text-align: center;
   color: red;
 }
+
+.long-temperature .long-city .city-name {
+  width: 45%;
+  margin-left: 10px;
+  margin-top: 14px;
+  font-weight: bolder;
+}
+
+.long-temperature .long-city .longForecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.long-temperature .long-city .longForecast .firstDay,
+.long-temperature .long-city .longForecast .secondDay,
+.long-temperature .long-city .longForecast .thirdDay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30%;
+}
+
+.long-temperature .long-city .longForecast .firstDay #temp-icon,
+.long-temperature .long-city .longForecast .secondDay #temp-icon,
+.long-temperature .long-city .longForecast .thirdDay #temp-icon {
+  margin: 1px;
+  height: 35px;
+  width: 35px;
+  background: grey;
+}
+
+.long-temperature .long-city .longForecast .firstDay .forecastFirst,
+.long-temperature .long-city .longForecast .firstDay .forecastSecond,
+.long-temperature .long-city .longForecast .firstDay .forecastThird,
+.long-temperature .long-city .longForecast .secondDay .forecastFirst,
+.long-temperature .long-city .longForecast .secondDay .forecastSecond,
+.long-temperature .long-city .longForecast .secondDay .forecastThird,
+.long-temperature .long-city .longForecast .thirdDay .forecastFirst,
+.long-temperature .long-city .longForecast .thirdDay .forecastSecond,
+.long-temperature .long-city .longForecast .thirdDay .forecastThird {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.long-temperature .long-city .longForecast .firstDay .forecastFirst .maxTemp,
+.long-temperature .long-city .longForecast .firstDay .forecastFirst .minTemp,
+.long-temperature .long-city .longForecast .firstDay .forecastSecond .maxTemp,
+.long-temperature .long-city .longForecast .firstDay .forecastSecond .minTemp,
+.long-temperature .long-city .longForecast .firstDay .forecastThird .maxTemp,
+.long-temperature .long-city .longForecast .firstDay .forecastThird .minTemp,
+.long-temperature .long-city .longForecast .secondDay .forecastFirst .maxTemp,
+.long-temperature .long-city .longForecast .secondDay .forecastFirst .minTemp,
+.long-temperature .long-city .longForecast .secondDay .forecastSecond .maxTemp,
+.long-temperature .long-city .longForecast .secondDay .forecastSecond .minTemp,
+.long-temperature .long-city .longForecast .secondDay .forecastThird .maxTemp,
+.long-temperature .long-city .longForecast .secondDay .forecastThird .minTemp,
+.long-temperature .long-city .longForecast .thirdDay .forecastFirst .maxTemp,
+.long-temperature .long-city .longForecast .thirdDay .forecastFirst .minTemp,
+.long-temperature .long-city .longForecast .thirdDay .forecastSecond .maxTemp,
+.long-temperature .long-city .longForecast .thirdDay .forecastSecond .minTemp,
+.long-temperature .long-city .longForecast .thirdDay .forecastThird .maxTemp,
+.long-temperature .long-city .longForecast .thirdDay .forecastThird .minTemp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.long-temperature .long-city .longForecast .firstDay .forecastFirst .maxTemp #max,
+.long-temperature .long-city .longForecast .firstDay .forecastFirst .minTemp #max,
+.long-temperature .long-city .longForecast .firstDay .forecastSecond .maxTemp #max,
+.long-temperature .long-city .longForecast .firstDay .forecastSecond .minTemp #max,
+.long-temperature .long-city .longForecast .firstDay .forecastThird .maxTemp #max,
+.long-temperature .long-city .longForecast .firstDay .forecastThird .minTemp #max,
+.long-temperature .long-city .longForecast .secondDay .forecastFirst .maxTemp #max,
+.long-temperature .long-city .longForecast .secondDay .forecastFirst .minTemp #max,
+.long-temperature .long-city .longForecast .secondDay .forecastSecond .maxTemp #max,
+.long-temperature .long-city .longForecast .secondDay .forecastSecond .minTemp #max,
+.long-temperature .long-city .longForecast .secondDay .forecastThird .maxTemp #max,
+.long-temperature .long-city .longForecast .secondDay .forecastThird .minTemp #max,
+.long-temperature .long-city .longForecast .thirdDay .forecastFirst .maxTemp #max,
+.long-temperature .long-city .longForecast .thirdDay .forecastFirst .minTemp #max,
+.long-temperature .long-city .longForecast .thirdDay .forecastSecond .maxTemp #max,
+.long-temperature .long-city .longForecast .thirdDay .forecastSecond .minTemp #max,
+.long-temperature .long-city .longForecast .thirdDay .forecastThird .maxTemp #max,
+.long-temperature .long-city .longForecast .thirdDay .forecastThird .minTemp #max {
+  color: red;
+  font-size: 15px;
+}
+
+.long-temperature .long-city .longForecast .firstDay .forecastFirst .maxTemp #min,
+.long-temperature .long-city .longForecast .firstDay .forecastFirst .minTemp #min,
+.long-temperature .long-city .longForecast .firstDay .forecastSecond .maxTemp #min,
+.long-temperature .long-city .longForecast .firstDay .forecastSecond .minTemp #min,
+.long-temperature .long-city .longForecast .firstDay .forecastThird .maxTemp #min,
+.long-temperature .long-city .longForecast .firstDay .forecastThird .minTemp #min,
+.long-temperature .long-city .longForecast .secondDay .forecastFirst .maxTemp #min,
+.long-temperature .long-city .longForecast .secondDay .forecastFirst .minTemp #min,
+.long-temperature .long-city .longForecast .secondDay .forecastSecond .maxTemp #min,
+.long-temperature .long-city .longForecast .secondDay .forecastSecond .minTemp #min,
+.long-temperature .long-city .longForecast .secondDay .forecastThird .maxTemp #min,
+.long-temperature .long-city .longForecast .secondDay .forecastThird .minTemp #min,
+.long-temperature .long-city .longForecast .thirdDay .forecastFirst .maxTemp #min,
+.long-temperature .long-city .longForecast .thirdDay .forecastFirst .minTemp #min,
+.long-temperature .long-city .longForecast .thirdDay .forecastSecond .maxTemp #min,
+.long-temperature .long-city .longForecast .thirdDay .forecastSecond .minTemp #min,
+.long-temperature .long-city .longForecast .thirdDay .forecastThird .maxTemp #min,
+.long-temperature .long-city .longForecast .thirdDay .forecastThird .minTemp #min {
+  color: green;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 5px;
+}
+
+.long-temperature .long-city .longForecast .firstDay .forecastFirst .maxTemp #minText,
+.long-temperature .long-city .longForecast .firstDay .forecastFirst .minTemp #minText,
+.long-temperature .long-city .longForecast .firstDay .forecastSecond .maxTemp #minText,
+.long-temperature .long-city .longForecast .firstDay .forecastSecond .minTemp #minText,
+.long-temperature .long-city .longForecast .firstDay .forecastThird .maxTemp #minText,
+.long-temperature .long-city .longForecast .firstDay .forecastThird .minTemp #minText,
+.long-temperature .long-city .longForecast .secondDay .forecastFirst .maxTemp #minText,
+.long-temperature .long-city .longForecast .secondDay .forecastFirst .minTemp #minText,
+.long-temperature .long-city .longForecast .secondDay .forecastSecond .maxTemp #minText,
+.long-temperature .long-city .longForecast .secondDay .forecastSecond .minTemp #minText,
+.long-temperature .long-city .longForecast .secondDay .forecastThird .maxTemp #minText,
+.long-temperature .long-city .longForecast .secondDay .forecastThird .minTemp #minText,
+.long-temperature .long-city .longForecast .thirdDay .forecastFirst .maxTemp #minText,
+.long-temperature .long-city .longForecast .thirdDay .forecastFirst .minTemp #minText,
+.long-temperature .long-city .longForecast .thirdDay .forecastSecond .maxTemp #minText,
+.long-temperature .long-city .longForecast .thirdDay .forecastSecond .minTemp #minText,
+.long-temperature .long-city .longForecast .thirdDay .forecastThird .maxTemp #minText,
+.long-temperature .long-city .longForecast .thirdDay .forecastThird .minTemp #minText {
+  margin-left: 4px;
+}
+
+.long-temperature .long-city .longForecast .firstDay .forecastFirst .maxTemp #text,
+.long-temperature .long-city .longForecast .firstDay .forecastFirst .minTemp #text,
+.long-temperature .long-city .longForecast .firstDay .forecastSecond .maxTemp #text,
+.long-temperature .long-city .longForecast .firstDay .forecastSecond .minTemp #text,
+.long-temperature .long-city .longForecast .firstDay .forecastThird .maxTemp #text,
+.long-temperature .long-city .longForecast .firstDay .forecastThird .minTemp #text,
+.long-temperature .long-city .longForecast .secondDay .forecastFirst .maxTemp #text,
+.long-temperature .long-city .longForecast .secondDay .forecastFirst .minTemp #text,
+.long-temperature .long-city .longForecast .secondDay .forecastSecond .maxTemp #text,
+.long-temperature .long-city .longForecast .secondDay .forecastSecond .minTemp #text,
+.long-temperature .long-city .longForecast .secondDay .forecastThird .maxTemp #text,
+.long-temperature .long-city .longForecast .secondDay .forecastThird .minTemp #text,
+.long-temperature .long-city .longForecast .thirdDay .forecastFirst .maxTemp #text,
+.long-temperature .long-city .longForecast .thirdDay .forecastFirst .minTemp #text,
+.long-temperature .long-city .longForecast .thirdDay .forecastSecond .maxTemp #text,
+.long-temperature .long-city .longForecast .thirdDay .forecastSecond .minTemp #text,
+.long-temperature .long-city .longForecast .thirdDay .forecastThird .maxTemp #text,
+.long-temperature .long-city .longForecast .thirdDay .forecastThird .minTemp #text {
+  text-align: center;
+}
 /*# sourceMappingURL=LongTermTemperature.css.map */

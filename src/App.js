@@ -114,6 +114,11 @@ class App extends Component {
     }
   };
 
+  toCelsius(degree) {
+    let toCelsius = (((degree - 32) * 5) / 9).toFixed(0);
+    return toCelsius;
+  }
+
   async getTemperatures(lat, long) {
     try {
       const api = `${this.state.proxy}https://api.darksky.net/forecast/${this.state.API_KEY}/${lat},${long}`;
@@ -154,7 +159,15 @@ class App extends Component {
             cities={this.state.cities}
             getIcon={this.getIcon}
           />
-          <LongTermTemperature />
+          <LongTermTemperature
+            proxy={this.state.proxy}
+            API_KEY={this.state.API_KEY}
+            cities={this.state.cities}
+            getIcon={this.getIcon}
+            forecastItem={this.state.forecastItem}
+            convertUnix={this.convertUnix}
+            toCelsius={this.toCelsius}
+          />
         </div>
       </React.Fragment>
     );

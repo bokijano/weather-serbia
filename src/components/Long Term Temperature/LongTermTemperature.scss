@@ -14,4 +14,59 @@
       color: red;
     }
   }
+  .long-city {
+    .city-name {
+      width: 45%;
+      margin-left: 10px;
+      margin-top: 14px;
+      font-weight: bolder;
+    }
+    .longForecast {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .firstDay,
+      .secondDay,
+      .thirdDay {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 30%;
+        #temp-icon {
+          margin: 1px;
+          height: 35px;
+          width: 35px;
+          background: grey;
+        }
+        .forecastFirst,
+        .forecastSecond,
+        .forecastThird {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .maxTemp,
+          .minTemp {
+            display: flex;
+            flex-direction: column;
+            #max {
+              color: red;
+              font-size: 15px;
+            }
+            #min {
+              color: green;
+              font-size: 12px;
+              margin-top: 2px;
+              margin-left: 5px;
+            }
+            #minText {
+              margin-left: 4px;
+            }
+            #text {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
 }

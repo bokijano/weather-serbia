@@ -10,10 +10,8 @@ export default class CurrentTemperature extends Component {
       const api = `${this.props.proxy}https://api.darksky.net/forecast/${this.props.API_KEY}/${lat},${long}`;
       const data = await fetch(api);
       const jsonData = await data.json();
-      console.log(jsonData);
 
       const { temperature, icon } = jsonData.currently;
-      console.log(icon);
 
       let temperatureC = (((temperature - 32) * 5) / 9).toFixed(0);
 
