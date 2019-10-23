@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/github.io/weather-serbia/precache-manifest.b0510bc6676b9cc4372ef7db18519623.js"
+  "/github.io/weather-serbia/precache-manifest.18736ca3fe4ee8f53c201cf988c6f010.js"
 );
 
 workbox.clientsClaim();
