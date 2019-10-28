@@ -7,6 +7,9 @@
 
 /* navbar style */
 .navbar {
+  position: fixed;
+  z-index: 1;
+  font-family: "Carter One", cursive;
   width: 100%;
   background: #2f96a3;
   display: -webkit-box;
@@ -26,6 +29,7 @@
   font-weight: bolder;
   text-align: center;
   margin-top: 10px;
+  margin-left: 30px;
 }
 
 .navbar .fas {
@@ -51,6 +55,7 @@
 
 .weather-container .map-content {
   width: 40%;
+  margin-top: 50px;
 }
 
 .weather-container .current-temperatures {

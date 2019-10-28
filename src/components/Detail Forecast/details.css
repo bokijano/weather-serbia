@@ -1,0 +1,188 @@
+.detailForecast {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
+  background: linear-gradient(#2f96a3, #303e8f);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 150, 163, 0.4)), to(rgba(48, 62, 143, 0.6)));
+  background: linear-gradient(rgba(47, 150, 163, 0.4), rgba(48, 62, 143, 0.6));
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 120px;
+}
+
+.detailForecast .dateCurrently {
+  text-align: center;
+}
+
+.detailForecast .daily {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.detailForecast .daily .summ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.detailForecast .daily .summ #summ-text {
+  color: #333;
+  margin-top: -10px;
+  text-align: center;
+}
+
+.detailForecast .daily #iconCurr {
+  margin: 2px;
+  height: 60px;
+  width: 60px;
+}
+
+.detailForecast .daily .currentlyTemp {
+  font-size: 25px;
+  color: #333;
+  margin-left: -30px;
+  margin-top: 15px;
+}
+
+.detailForecast .daily .maxTemp,
+.detailForecast .daily .minTemp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+  text-align: center;
+  width: 25%;
+}
+
+.detailForecast .daily .maxTemp #max,
+.detailForecast .daily .minTemp #max {
+  color: red;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .detailForecast .daily .maxTemp #max,
+  .detailForecast .daily .minTemp #max {
+    font-size: 22px;
+  }
+}
+
+.detailForecast .daily .maxTemp #min,
+.detailForecast .daily .minTemp #min {
+  color: green;
+  font-size: 20px;
+}
+
+.detailForecast .daily .maxTemp {
+  padding-left: 60px;
+}
+
+.detailForecast .daily .minTemp {
+  padding-right: 60px;
+}
+
+.detailForecast .hourlyTemp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.detailForecast .hourlyTemp #hourly-icon {
+  margin: 2px;
+  height: 60px;
+  width: 60px;
+  background: lightgrey;
+}
+
+.detailForecast .dailyTemp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.detailForecast .dailyTemp .day-temp {
+  width: 20%;
+}
+
+.detailForecast .dailyTemp .day-temp h6 {
+  color: red;
+}
+
+.detailForecast .dailyTemp .day-temp .long-temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.detailForecast .dailyTemp .day-temp .long-temp #long-icon {
+  margin: 2px;
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background: lightgrey;
+}
+
+.detailForecast a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  background: transparent;
+  border: 0.05rem solid whitesmoke;
+  font-family: "Carter One", cursive;
+  color: whitesmoke;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  margin-left: 50px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.detailForecast a:hover {
+  background: whitesmoke;
+  color: dodgerblue;
+  border: 0.05rem solid blue;
+}
+/*# sourceMappingURL=details.css.map */

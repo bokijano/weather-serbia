@@ -20,7 +20,7 @@ export default class CurrentTemperature extends Component {
 
       let result = `
       
-      <li id="${id}" class="city-pos"'>
+      <li id="${id}" class="city-pos">
         <h4>${cityName}</h4>
         <div class="temperature-content">
           <img id=${icons} src="" alt="" />

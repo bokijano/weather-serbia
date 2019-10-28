@@ -17,7 +17,6 @@ export default class LongTermTemperature extends Component {
       const api = `${proxy}https://api.darksky.net/forecast/${API_KEY}/${lat},${long}`;
       const data = await fetch(api);
       const jsonData = await data.json();
-      console.log(jsonData);
 
       //forecast for tomorow
       const time1 = jsonData.daily.data[1].time;
@@ -25,7 +24,6 @@ export default class LongTermTemperature extends Component {
       const minTemp = toCelsius(jsonData.daily.data[1].temperatureMin);
       const maxTemp = toCelsius(jsonData.daily.data[1].temperatureMax);
       const icon1 = jsonData.daily.data[1].icon;
-      console.log(icon1);
       let iconImg1 = this.getForecastIcon(icon1);
 
       //forecast for day after tomorow
@@ -102,9 +100,8 @@ export default class LongTermTemperature extends Component {
 
       document.querySelector(".long-temperature").innerHTML += result;
 
-      let icons = document.getElementById("temp-icon");
-      console.log(icons);
-      getIcon(icon1, icons);
+      //let icons = document.getElementById("temp-icon");
+      //getIcon(icon1, icons);
     } catch (error) {
       console.log(error);
     }

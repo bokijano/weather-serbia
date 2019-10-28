@@ -6,6 +6,9 @@
 
 /* navbar style */
 .navbar {
+  position: fixed;
+  z-index: 1;
+  font-family: "Carter One", cursive;
   width: 100%;
   background: rgb(47, 150, 163);
   display: flex;
@@ -16,6 +19,7 @@
     font-weight: bolder;
     text-align: center;
     margin-top: 10px;
+    margin-left: 30px;
   }
   .fas {
     color: whitesmoke;
@@ -32,12 +36,15 @@
   margin-bottom: 10px;
   .map-content {
     width: 40%;
+    margin-top: 50px;
   }
   .current-temperatures {
     width: 30%;
+    margin-top: 50px;
   }
   .long-temperatures {
     width: 30%;
+    margin-top: 50px;
   }
   @media screen and (max-width: 1200px) {
     flex-wrap: wrap;

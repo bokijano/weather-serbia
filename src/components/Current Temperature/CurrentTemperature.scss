@@ -50,7 +50,6 @@
   }
   .city-pos {
     position: absolute;
-    cursor: pointer;
     text-shadow: 2px 2px 4px whitesmoke;
     font-weight: bolder;
     display: flex;
@@ -73,10 +72,6 @@
       span {
         margin: 2px;
       }
-    }
-
-    &:hover {
-      text-shadow: 2px 2px 4px;
     }
   }
 }

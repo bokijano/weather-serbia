@@ -10,6 +10,13 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .current-temperatures {
+    margin-top: 90px;
+  }
 }
 
 .current-temperatures .currDate {
@@ -36,16 +43,6 @@
   width: 45%;
   margin-left: 10px;
   margin-top: 2px;
-  font-weight: bolder;
-}
-
-.current-temperatures .curr-city .city-name .fa {
-  cursor: pointer;
-  padding-left: 10px;
-}
-
-.current-temperatures .curr-city .city-name .fa.fa:hover {
-  font-size: 120%;
   font-weight: bolder;
 }
 
@@ -79,7 +76,7 @@
 .current-temperatures .curr-city .minTemp #text {
   font-size: 10px;
   font-weight: bolder;
-  padding-top: 5px;
+  padding-top: 3.4px;
   padding-right: 10px;
 }
 

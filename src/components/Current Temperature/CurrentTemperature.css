@@ -63,7 +63,6 @@
 
 .map-content .city-pos {
   position: absolute;
-  cursor: pointer;
   text-shadow: 2px 2px 4px whitesmoke;
   font-weight: bolder;
   display: -webkit-box;
@@ -106,9 +105,5 @@
 .map-content .city-pos .temperature-content h2,
 .map-content .city-pos .temperature-content span {
   margin: 2px;
-}
-
-.map-content .city-pos:hover {
-  text-shadow: 2px 2px 4px;
 }
 /*# sourceMappingURL=CurrentTemperature.css.map */

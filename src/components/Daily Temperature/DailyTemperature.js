@@ -2,10 +2,18 @@ import React, { Component } from "react";
 import "./DailyTemperature.css";
 
 export default class DailyTemperature extends Component {
-  state = {};
+  state = {
+    displayDetailsTemp: ""
+  };
   async getTemperatures(lat, long, arr) {
     try {
-      const { proxy, API_KEY, cities, forecastItem, convertUnix } = this.props;
+      const {
+        proxy,
+        API_KEY,
+        cities,
+        forecastItem,
+        convertUnix
+      } = this.props;
 
       const api = `${proxy}https://api.darksky.net/forecast/${API_KEY}/${lat},${long}`;
       const data = await fetch(api);
@@ -62,9 +70,8 @@ export default class DailyTemperature extends Component {
 
       let result = `
       <div class="curr-city">
-       <h2 class="city-name">${cityName}
-        <span class="fa fa-angle-double-right"></span>
-       </h2>
+       <h2 class="city-name">${cityName}</h2>
+       
        <img id="temp-icon" src=${iconImg} alt="no picture" />
        <h5 class="maxTemp"><span id="max">${tempMax} C</span><span id="text">MAX</span></h5>
        <h5 class="minTemp"><span id="min">${tempMin} C</span><span id="text">MIN</span></h5>
@@ -88,12 +95,16 @@ export default class DailyTemperature extends Component {
     this.getTemperatures(45.25167, 19.83694, 7);
     this.getTemperatures(46.1, 19.66667, 8);
   }
+  displayDetails = () => {
+    console.log("work");
+  };
   render() {
     return (
-      <div className="current-temperatures">
-        <h2 className="currDate"></h2>
-        <hr></hr>
-      </div>
+        <div className="current-temperatures">
+          <h2 className="currDate"></h2>
+
+          <hr></hr>
+        </div>
     );
   }
 }
