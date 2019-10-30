@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "34ff7665870ee3dfdd60",
-    "url": "/github.io/weather-serbia/static/css/main.dd27b11b.chunk.css"
+    "revision": "4cc19dba6206c551a811",
+    "url": "/github.io/weather-serbia/static/css/main.3dd31c29.chunk.css"
   },
   {
-    "revision": "34ff7665870ee3dfdd60",
-    "url": "/github.io/weather-serbia/static/js/main.34ff7665.chunk.js"
+    "revision": "4cc19dba6206c551a811",
+    "url": "/github.io/weather-serbia/static/js/main.4cc19dba.chunk.js"
   },
   {
     "revision": "fc14c366082b8486094a",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/github.io/weather-serbia/static/media/serbia.82ff3005.png"
   },
   {
-    "revision": "522eba39b7d9b27600dbf7605e4bdbc8",
+    "revision": "4ff297fcf7b46238c6c09eba1511faad",
     "url": "/github.io/weather-serbia/index.html"
   }
 ];
