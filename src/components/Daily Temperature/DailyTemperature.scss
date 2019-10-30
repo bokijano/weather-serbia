@@ -4,9 +4,6 @@
   flex-direction: column;
   justify-content: space-between;
   margin-top: 60px;
-  @media screen and(max-width: 768px) {
-    margin-top: 90px;
-  }
 
   .currDate {
     text-align: center;

@@ -60,10 +60,12 @@
 
 .weather-container .current-temperatures {
   width: 30%;
+  margin-top: 50px;
 }
 
 .weather-container .long-temperatures {
   width: 30%;
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -93,6 +95,7 @@
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 90px;
   }
 }
 /*# sourceMappingURL=forecast.css.map */

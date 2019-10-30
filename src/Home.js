@@ -13,7 +13,7 @@ import rain from "./temperature icons/rain.svg";
 import sleet from "./temperature icons/sleet.svg";
 import snow from "./temperature icons/snow.svg";
 import wind from "./temperature icons/snow.svg";
-import { Route } from "react-router-dom";
+import { ProductConsumer } from "./Context.js";
 
 class App extends Component {
   state = {
@@ -41,8 +41,7 @@ class App extends Component {
       rain
     ],
     proxy: "http://cors-anywhere.herokuapp.com/",
-    API_KEY: "fb4c116f915c61742654d62a921fffa2",
-    detailsDisplay: true
+    API_KEY: "fb4c116f915c61742654d62a921fffa2"
   };
 
   convertUnix = unixTime => {
@@ -140,34 +139,35 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div className="weather-container">
-          <DailyTemperature
-            proxy={this.state.proxy}
-            API_KEY={this.state.API_KEY}
-            cities={this.state.cities}
-            getIcon={this.getIcon}
-            forecastItem={this.state.forecastItem}
-            convertUnix={this.convertUnix}
-          />
-          <CurrentTemperature
-            proxy={this.state.proxy}
-            API_KEY={this.state.API_KEY}
-            cities={this.state.cities}
-            getIcon={this.getIcon}
-            displayDetails={this.displayDetails}
-          />
-          <LongTermTemperature
-            proxy={this.state.proxy}
-            API_KEY={this.state.API_KEY}
-            cities={this.state.cities}
-            getIcon={this.getIcon}
-            forecastItem={this.state.forecastItem}
-            convertUnix={this.convertUnix}
-            toCelsius={this.toCelsius}
-          />
-        </div>
-      </React.Fragment>
+      <ProductConsumer>
+        {value => (
+          <div className="weather-container">
+            <DailyTemperature
+              proxy={this.state.proxy}
+              API_KEY={this.state.API_KEY}
+              cities={value.cities}
+              getIcon={this.getIcon}
+              forecastItem={this.state.forecastItem}
+              convertUnix={value.convertUnix}
+            />
+            <CurrentTemperature
+              proxy={this.state.proxy}
+              API_KEY={this.state.API_KEY}
+              cities={value.cities}
+              getIcon={this.getIcon}
+            />
+            <LongTermTemperature
+              proxy={this.state.proxy}
+              API_KEY={this.state.API_KEY}
+              cities={value.cities}
+              getIcon={this.getIcon}
+              forecastItem={this.state.forecastItem}
+              convertUnix={value.convertUnix}
+              toCelsius={value.toCelsius}
+            />
+          </div>
+        )}
+      </ProductConsumer>
     );
   }
 }
