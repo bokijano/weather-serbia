@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/github.io/weather-serbia/static/media/sleet.a0d9e9ae.svg"
   },
   {
-    "revision": "ccedacdad260edcf8c0072fd0c619d92",
+    "revision": "e632bf53bba5a17362b48f80b078734e",
     "url": "/github.io/weather-serbia/index.html"
   }
 ];
