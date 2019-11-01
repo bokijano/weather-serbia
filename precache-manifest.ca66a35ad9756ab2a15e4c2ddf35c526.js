@@ -1,23 +1,27 @@
 self.__precacheManifest = [
   {
-    "revision": "4cc19dba6206c551a811",
-    "url": "/github.io/weather-serbia/static/css/main.3dd31c29.chunk.css"
+    "revision": "1fdfb5587987c9f2a3d1",
+    "url": "/github.io/weather-serbia/static/css/main.98c5755f.chunk.css"
   },
   {
-    "revision": "4cc19dba6206c551a811",
-    "url": "/github.io/weather-serbia/static/js/main.4cc19dba.chunk.js"
+    "revision": "1fdfb5587987c9f2a3d1",
+    "url": "/github.io/weather-serbia/static/js/main.1fdfb558.chunk.js"
   },
   {
     "revision": "fc14c366082b8486094a",
     "url": "/github.io/weather-serbia/static/js/runtime~main.fc14c366.js"
   },
   {
-    "revision": "aa4f7e687c3b4f5d149e",
-    "url": "/github.io/weather-serbia/static/js/2.aa4f7e68.chunk.js"
+    "revision": "1aeb0d269c2e1f5d6b6b",
+    "url": "/github.io/weather-serbia/static/js/2.1aeb0d26.chunk.js"
   },
   {
     "revision": "492aef1167956247c2151bfb19b5a85f",
     "url": "/github.io/weather-serbia/static/media/snow.492aef11.svg"
+  },
+  {
+    "revision": "82ff30057a21cc6bc339bbc78516a77e",
+    "url": "/github.io/weather-serbia/static/media/serbia.82ff3005.png"
   },
   {
     "revision": "4b42731b96810f66246577702e146675",
@@ -52,11 +56,7 @@ self.__precacheManifest = [
     "url": "/github.io/weather-serbia/static/media/sleet.a0d9e9ae.svg"
   },
   {
-    "revision": "82ff30057a21cc6bc339bbc78516a77e",
-    "url": "/github.io/weather-serbia/static/media/serbia.82ff3005.png"
-  },
-  {
-    "revision": "4ff297fcf7b46238c6c09eba1511faad",
+    "revision": "ccedacdad260edcf8c0072fd0c619d92",
     "url": "/github.io/weather-serbia/index.html"
   }
 ];
