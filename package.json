@@ -2,7 +2,7 @@
   "name": "weather-serbia",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bokijano/github.io/weather-serbia",
+  "homepage": "https://bokijano.github.io/weather-serbia",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.10.2",
